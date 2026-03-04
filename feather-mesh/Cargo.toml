@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "mesh_cli",
+  "mesh_core"
+]
+resolver = "2"
