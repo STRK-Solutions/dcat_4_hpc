@@ -1,4 +1,4 @@
 pub mod db;
 pub mod models;
 
-pub use db::{init_db, init_default_db, DEFAULT_DB_FILENAME};
+pub use db::{DEFAULT_DB_FILENAME, init_db, init_default_db};
