@@ -6,7 +6,7 @@ from .services import Registry
 def seed_mock_data(registry: Registry) -> None:
 	"""Populate the registry with Agriculture Canada–style example data products."""
 
-	# Teams (domains)
+	# Teams (display names)
 	climate_team = registry.create_team("Climate & Environment")
 	crops_team = registry.create_team("Crop Analytics")
 
@@ -16,7 +16,7 @@ def seed_mock_data(registry: Registry) -> None:
 		description="Daily climate observations aggregated from Environment Canada weather stations.",
 		owner_team_id=climate_team.teams_id,
 		data_format="parquet",
-		access_uri="s3://agriculture-canada/curated/climate_observations_daily/",
+		access_uri="/publish/climate_environment/canada_climate_observations_daily",
 		status="active",
 		classification="public",
 	)
@@ -26,7 +26,7 @@ def seed_mock_data(registry: Registry) -> None:
 		description="Grid-level crop yield forecasts derived from historical yield data and climate indicators.",
 		owner_team_id=crops_team.teams_id,
 		data_format="geoparquet",
-		access_uri="s3://agriculture-canada/curated/crop_yield_forecast/",
+		access_uri="/publish/crop_analytics/crop_yield_forecast_grid",
 		status="active",
 		classification="internal",
 	)
@@ -102,7 +102,7 @@ def seed_mock_data(registry: Registry) -> None:
 		description="Weekly soil moisture index derived from satellite and in-situ sensor data.",
 		owner_team_id=climate_team.teams_id,
 		data_format="parquet",
-		access_uri="s3://agriculture-canada/curated/soil_moisture_index/",
+		access_uri="/publish/climate_environment/soil_moisture_index_weekly",
 		status="active",
 		classification="internal",
 	)
@@ -142,7 +142,7 @@ def seed_mock_data(registry: Registry) -> None:
 		description="Quarterly livestock population counts across Canadian provinces.",
 		owner_team_id=crops_team.teams_id,
 		data_format="delta",
-		access_uri="s3://agriculture-canada/curated/livestock_population/",
+		access_uri="/publish/crop_analytics/livestock_population_statistics",
 		status="active",
 		classification="restricted",
 	)
@@ -182,7 +182,7 @@ def seed_mock_data(registry: Registry) -> None:
 		description="Normalized Difference Vegetation Index (NDVI) timeseries derived from satellite imagery.",
 		owner_team_id=climate_team.teams_id,
 		data_format="geoparquet",
-		access_uri="s3://agriculture-canada/curated/ndvi_timeseries/",
+		access_uri="/publish/climate_environment/satellite_ndvi_timeseries",
 		status="active",
 		classification="public",
 	)
@@ -222,7 +222,7 @@ def seed_mock_data(registry: Registry) -> None:
 		description="Monthly irrigation water usage aggregated by agricultural region.",
 		owner_team_id=crops_team.teams_id,
 		data_format="parquet",
-		access_uri="s3://agriculture-canada/curated/irrigation_water_usage/",
+		access_uri="/publish/crop_analytics/irrigation_water_usage_monthly",
 		status="draft",
 		classification="internal",
 	)

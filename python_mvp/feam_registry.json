@@ -7,7 +7,7 @@
       "name": "Crop Analytics"
     },
     {
-      "name": "team_demo"
+      "name": "Demo Team"
     }
   ],
   "products": [
@@ -16,7 +16,7 @@
       "description": "Daily climate observations aggregated from Environment Canada weather stations.",
       "owner_team_id": 1,
       "data_format": "parquet",
-      "access_uri": "s3://agriculture-canada/curated/climate_observations_daily/",
+      "access_uri": "/publish/climate_environment/canada_climate_observations_daily",
       "status": "active",
       "classification": "public"
     },
@@ -25,7 +25,7 @@
       "description": "Grid-level crop yield forecasts derived from historical yield data and climate indicators.",
       "owner_team_id": 2,
       "data_format": "geoparquet",
-      "access_uri": "s3://agriculture-canada/curated/crop_yield_forecast/",
+      "access_uri": "/publish/crop_analytics/crop_yield_forecast_grid",
       "status": "active",
       "classification": "internal"
     },
@@ -34,7 +34,7 @@
       "description": "Weekly soil moisture index derived from satellite and in-situ sensor data.",
       "owner_team_id": 1,
       "data_format": "parquet",
-      "access_uri": "s3://agriculture-canada/curated/soil_moisture_index/",
+      "access_uri": "/publish/climate_environment/soil_moisture_index_weekly",
       "status": "active",
       "classification": "internal"
     },
@@ -43,7 +43,7 @@
       "description": "Quarterly livestock population counts across Canadian provinces.",
       "owner_team_id": 2,
       "data_format": "delta",
-      "access_uri": "s3://agriculture-canada/curated/livestock_population/",
+      "access_uri": "/publish/crop_analytics/livestock_population_statistics",
       "status": "active",
       "classification": "restricted"
     },
@@ -52,7 +52,7 @@
       "description": "Normalized Difference Vegetation Index (NDVI) timeseries derived from satellite imagery.",
       "owner_team_id": 1,
       "data_format": "geoparquet",
-      "access_uri": "s3://agriculture-canada/curated/ndvi_timeseries/",
+      "access_uri": "/publish/climate_environment/satellite_ndvi_timeseries",
       "status": "active",
       "classification": "public"
     },
@@ -61,27 +61,9 @@
       "description": "Monthly irrigation water usage aggregated by agricultural region.",
       "owner_team_id": 2,
       "data_format": "parquet",
-      "access_uri": "s3://agriculture-canada/curated/irrigation_water_usage/",
+      "access_uri": "/publish/crop_analytics/irrigation_water_usage_monthly",
       "status": "draft",
       "classification": "internal"
-    },
-    {
-      "name": "test",
-      "description": "tes",
-      "owner_team_id": 1,
-      "data_format": "test",
-      "access_uri": "test",
-      "status": "test",
-      "classification": "test"
-    },
-    {
-      "name": "test",
-      "description": "test",
-      "owner_team_id": 1,
-      "data_format": "test",
-      "access_uri": "test",
-      "status": "test",
-      "classification": "test"
     },
     {
       "name": "new product",
@@ -106,35 +88,8 @@
       "description": "Regional yield forecasting",
       "owner_team_id": 3,
       "data_format": "model_artifact",
-      "access_uri": "/publish/team_demo/yield_model_training_output",
+      "access_uri": "/publish/demo_team/yield_model_training_output",
       "status": "draft",
-      "classification": "internal"
-    },
-    {
-      "name": "test",
-      "description": "test",
-      "owner_team_id": 4,
-      "data_format": "test",
-      "access_uri": "/publish/team_a/test",
-      "status": "active",
-      "classification": "internal"
-    },
-    {
-      "name": "test",
-      "description": "test",
-      "owner_team_id": 4,
-      "data_format": "test",
-      "access_uri": "/publish/team_a/test",
-      "status": "active",
-      "classification": "internal"
-    },
-    {
-      "name": "test",
-      "description": "test",
-      "owner_team_id": 3,
-      "data_format": "parquet",
-      "access_uri": "/publish/team_demo/test",
-      "status": "active",
       "classification": "internal"
     }
   ],
@@ -308,59 +263,17 @@
       "value_type": "string"
     },
     {
-      "data_product_id": 11,
+      "data_product_id": 9,
       "namespace": "feam",
       "meta_key": "source_path",
-      "meta_value": "./data/team_demo/yield_model/v3",
+      "meta_value": "./data/demo_team/yield_model/v3",
       "value_type": "path"
     },
     {
-      "data_product_id": 11,
+      "data_product_id": 9,
       "namespace": "feam",
       "meta_key": "publish_namespace",
-      "meta_value": "team_demo",
-      "value_type": "string"
-    },
-    {
-      "data_product_id": 12,
-      "namespace": "feam",
-      "meta_key": "source_path",
-      "meta_value": "data/demo/",
-      "value_type": "path"
-    },
-    {
-      "data_product_id": 12,
-      "namespace": "feam",
-      "meta_key": "publish_namespace",
-      "meta_value": "team_a",
-      "value_type": "string"
-    },
-    {
-      "data_product_id": 13,
-      "namespace": "feam",
-      "meta_key": "source_path",
-      "meta_value": "data/demo",
-      "value_type": "path"
-    },
-    {
-      "data_product_id": 13,
-      "namespace": "feam",
-      "meta_key": "publish_namespace",
-      "meta_value": "team_a",
-      "value_type": "string"
-    },
-    {
-      "data_product_id": 14,
-      "namespace": "feam",
-      "meta_key": "source_path",
-      "meta_value": "datasets/demo",
-      "value_type": "path"
-    },
-    {
-      "data_product_id": 14,
-      "namespace": "feam",
-      "meta_key": "publish_namespace",
-      "meta_value": "team_demo",
+      "meta_value": "demo_team",
       "value_type": "string"
     }
   ]

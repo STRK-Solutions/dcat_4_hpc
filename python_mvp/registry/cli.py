@@ -42,6 +42,8 @@ def load_registry(registry: Registry) -> None:
 		return
 
 	for entry in metadata_entries:
+		if registry.get_product(entry["data_product_id"]) is None:
+			continue
 		registry.add_metadata(
 			data_product_id=entry["data_product_id"],
 			namespace=entry["namespace"],
@@ -168,13 +170,23 @@ def get_or_create_team(registry: Registry, team_name: str) -> int:
 	return registry.create_team(team_name).teams_id
 
 
+def namespace_to_team_name(namespace: str) -> str:
+	namespace_map = {
+		"demo_team": "Demo Team",
+		"climate_environment": "Climate & Environment",
+		"crop_analytics": "Crop Analytics",
+	}
+	return namespace_map.get(namespace, namespace)
+
+
 def resolve_current_namespace() -> str:
-	return os.getenv("FEAM_NAMESPACE", "team_demo")
+	return os.getenv("FEAM_NAMESPACE", "demo_team")
 
 
 def serve_product(registry: Registry, args: argparse.Namespace) -> None:
 	namespace = resolve_current_namespace()
-	owner_team_id = get_or_create_team(registry, namespace)
+	team_name = namespace_to_team_name(namespace)
+	owner_team_id = get_or_create_team(registry, team_name)
 
 	path = args.path or input("Asset path: ").strip()
 	name = args.name or input("Name: ").strip()

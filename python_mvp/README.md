@@ -89,5 +89,5 @@ feam show 1 --version 1.0.0
 
 `feam serve` now assumes the current user is already operating inside a team namespace.
 The namespace is resolved from the `FEAM_NAMESPACE` environment variable and defaults
-to `team_a` if it is not set. The served product is stored with a simulated publish
+to `demo_team` if it is not set. The served product is stored with a simulated publish
 path like `/publish/<namespace>/<name>`.
