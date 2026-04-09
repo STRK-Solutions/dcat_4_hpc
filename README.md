@@ -49,8 +49,12 @@ Contains GitHub-specific project automation, currently including workflow config
 
 Contains project-level written documentation separate from the implementation directories. Use this for broader context on the capstone proposal and framing.
 
+### PDD document
+
+Contains the product definition document, outlining an in-depth overview of the Feather Mesh product.
+
 ## Where To Go Next
 
 - If you want the Python prototype, start in [`python_mvp/README.md`](/Users/tazimkhan/git/capstone/dcat_4_hpc/python_mvp/README.md).
 - If you want the Rust implementation, start in [`feather-mesh/README.md`](/Users/tazimkhan/git/capstone/dcat_4_hpc/feather-mesh/README.md).
-- If you want architecture context first, browse `diagrams/` and `proposal.md`.
+- If you want architecture context first, browse `diagrams/`, `proposal.md`, and `Feather_Mesh_PDD_Revised.pdf`.
